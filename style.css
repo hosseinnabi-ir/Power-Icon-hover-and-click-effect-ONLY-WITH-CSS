@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #181818;
+}
+
+.button {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    line-height: 160px;
+    text-align: center;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 100px;
+    transition: .3s;
+}
+
+.button i {
+    color: #eeeeee;
+    text-shadow: 5px 6px 7px rgba(0, 0, 0, .5);
+    transition: .3s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ .button {
+    box-shadow: 0 0 40px #0099ff;
+    background: linear-gradient(45deg,
+                #1b1b1b 50%,
+                #292929 50%);
+    transform: scale(1.1);
+}
+
+input:checked ~ .button i {
+    color: #0099ff;
+}
